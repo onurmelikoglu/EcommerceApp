@@ -1,4 +1,6 @@
+import 'package:ecommerceapp/home/food_page_body.dart';
 import 'package:ecommerceapp/utils/colors.dart';
+import 'package:ecommerceapp/utils/dimentions.dart';
 import 'package:ecommerceapp/widgets/big_text.dart';
 import 'package:ecommerceapp/widgets/small_text.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +19,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
         body: Column(
       children: [
         Container(
-          margin: EdgeInsets.only(top: 45, bottom: 10),
-          padding: EdgeInsets.only(left: 20, right: 20),
+          margin: EdgeInsets.only(top: Dimentions.height45, bottom: Dimentions.height10),
+          padding: EdgeInsets.only(left: Dimentions.width20, right: Dimentions.width20),
           child: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,21 +38,23 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),
                 Center(
                   child: Container(
-                    width: 45,
-                    height: 45,
+                    width: Dimentions.width45,
+                    height: Dimentions.height45,
                     child: Icon(
                       Icons.search,
                       color: Colors.white,
+                      size: Dimentions.iconSize24
                     ),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(Dimentions.radius15),
                         color: AppColors.mainColor),
                   ),
                 )
               ],
             ),
           ),
-        )
+        ),
+        FoodPageBody()
       ],
     ));
   }
