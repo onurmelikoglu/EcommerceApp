@@ -1,4 +1,6 @@
-import 'package:ecommerceapp/utils/dimentions.dart';
+// ignore_for_file: must_be_immutable
+
+import 'package:ecommerceapp/utils/dimensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class BigText extends StatelessWidget {
@@ -21,7 +23,7 @@ class BigText extends StatelessWidget {
         style: TextStyle(
             color: color, 
             fontWeight: FontWeight.w400, 
-            fontSize: size == 0 ? Dimentions.font20:size,
+            fontSize: size == 0 ? Dimensions.font20:size,
             fontFamily: "Roboto"
         )
     );
