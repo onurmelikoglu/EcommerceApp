@@ -1,6 +1,7 @@
 import 'package:ecommerceapp/utils/dimensions.dart';
 import 'package:ecommerceapp/widgets/app_column.dart';
 import 'package:ecommerceapp/widgets/app_icon.dart';
+import 'package:ecommerceapp/widgets/expandable_text_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/colors.dart';
@@ -17,6 +18,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // Background image
           Positioned(
             left: 0,
             right: 0,
@@ -31,6 +33,7 @@ class PopularFoodDetail extends StatelessWidget {
               ),
             )
           ),
+          // icon widgets
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -43,6 +46,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             )
           ),
+          // introduction of food
           Positioned(
             left: 0,
             right: 0,
@@ -64,13 +68,16 @@ class PopularFoodDetail extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AppColumn(text: "Vegan Salad",),
+                  const AppColumn(text: "Vegan Salad",),
                   SizedBox(height: Dimensions.height20,),
-                  BigText(text: "Introduction")
+                  BigText(text: "Introduction"),
+                  SizedBox(height: Dimensions.height10,),
+                  Expanded(child: SingleChildScrollView(child: ExpandableTextWidget(text: "Chicken marinated in a spiced yougurt is placed in a large port then this makes a great "*30)))
                 ],
               ),
             )
           ),
+
         ],
       ),
       bottomNavigationBar: Container(
